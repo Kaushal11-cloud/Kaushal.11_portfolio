@@ -73,11 +73,68 @@
 
     <main>
       <!-- ==========================================================================
-           HERO SECTION (HOME) - Background is kaushal-11.jpg
+           HERO SECTION (HOME) - Custom 3D Stage with Interactive Dumbbell
            ========================================================================== -->
       <section id="home" class="hero-section">
-        <!-- Ambient Grid Overlay -->
+        <!-- Ambient Grid & Spotlight -->
         <div class="hero-overlay-grid" aria-hidden="true"></div>
+        <div class="hero-ambient-spotlight" aria-hidden="true"></div>
+
+        <!-- Vertical DEVELOPER typography on the edge -->
+        <aside class="hero-lateral-tag" aria-hidden="true">
+          <span class="lateral-dot"></span>
+          <span class="lateral-text">CREATIVE DEVELOPER &bull; DIGITAL ARCHITECT</span>
+          <span class="lateral-divider"></span>
+          <span class="lateral-index">EST. 2011 // XI</span>
+        </aside>
+
+        <!-- Main Hero Stage Chamber -->
+        <div class="hero-stage-container">
+          
+          <!-- Small "AVAILABLE FOR PROJECTS" indicator -->
+          <div class="hero-status-pill">
+            <span class="status-indicator"></span>
+            <span class="status-text">AVAILABLE FOR PROJECTS &bull; Q4 2026</span>
+          </div>
+
+          <!-- 3D Typography & Physical Dumbbell Overlap Chamber -->
+          <div class="hero-interactive-chamber">
+            <!-- Background Layer: Beveled 3D Watermark 11 -->
+            <div class="hero-watermark-3d" aria-hidden="true">11</div>
+
+            <!-- Typography Layer: Huge KAUSHAL Typography Behind Dumbbell -->
+            <div class="hero-huge-title" aria-label="KAUSHAL">
+              <span class="title-word">KAUSHAL</span>
+            </div>
+
+            <!-- Physical Overlap: 3D Dumbbell Object in Front of Text (Transitions on Scroll) -->
+            <div class="hero-dumbbell-rig" id="heroDumbbellRig">
+              <video 
+                id="heroDumbbellVideo"
+                class="hero-dumbbell-render"
+                src="images/dumbbell-cropped.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+                preload="auto">
+              </video>
+            </div>
+
+            <!-- Editorial Credentials Row -->
+            <div class="hero-editorial-subtitles">
+              <div class="editorial-col left">
+                <span class="sub-label">PARTNERSHIP</span>
+                <span class="sub-val">YOUR TRUSTED PARTNER IN INNOVATION AND CRAFT</span>
+              </div>
+              <div class="editorial-col right">
+                <span class="sub-label">HERITAGE</span>
+                <span class="sub-val">EST. 2011 &bull; + A DECADE OF EXCELLENCE</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
 
         <!-- Hero Actions & Metrics Row (Lower Hero Area) -->
         <div class="container hero-content">

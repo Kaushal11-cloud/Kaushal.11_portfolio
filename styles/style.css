@@ -314,24 +314,23 @@ img {
 }
 
 /* ==========================================================================
-   HERO / HOME SECTION (Uses kaushal-11.jpg as full background)
+   HERO / HOME SECTION - Custom 3D Stage with Overlapping Dumbbell
    ========================================================================== */
 .hero-section {
   position: relative;
   min-height: 100vh;
   width: 100%;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   background-color: var(--bg-dark);
   background-image: 
-    linear-gradient(180deg, rgba(8, 9, 11, 0.25) 0%, rgba(8, 9, 11, 0.45) 55%, var(--bg-dark) 100%),
-    url('../images/kaushal-11.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  padding-top: calc(var(--nav-height) + 40px);
-  padding-bottom: 70px;
+    radial-gradient(circle at 50% 45%, rgba(229, 169, 60, 0.05) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(8, 9, 11, 0.4) 0%, rgba(8, 9, 11, 0.7) 60%, var(--bg-dark) 100%);
+  overflow: hidden;
+  padding-top: calc(var(--nav-height) + 24px);
+  padding-bottom: 50px;
 }
 
 .hero-overlay-grid {
@@ -345,11 +344,255 @@ img {
   z-index: 1;
 }
 
+.hero-ambient-spotlight {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(85vw, 800px);
+  height: min(85vw, 800px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(229, 169, 60, 0.08) 0%, rgba(229, 169, 60, 0.015) 50%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   VERTICAL DEVELOPER TYPOGRAPHY ON THE EDGE
+   ========================================================================== */
+.hero-lateral-tag {
+  position: fixed;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left center;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 25;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.85;
+  transition: opacity var(--transition-smooth);
+}
+
+.lateral-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  box-shadow: 0 0 10px var(--accent-gold);
+}
+
+.lateral-divider {
+  width: 32px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.lateral-index {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+  .hero-lateral-tag {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   MAIN HERO 3D STAGE & CHAMBER
+   ========================================================================== */
+.hero-stage-container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  z-index: 3;
+}
+
+/* Small "AVAILABLE FOR PROJECTS" indicator */
+.hero-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 18px;
+  border-radius: var(--radius-full);
+  background: rgba(18, 20, 26, 0.8);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(14px);
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: var(--transition-fast);
+}
+
+.hero-status-pill:hover {
+  border-color: rgba(229, 169, 60, 0.45);
+  box-shadow: 0 4px 25px rgba(229, 169, 60, 0.15);
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 10px #10b981;
+  animation: pulseGreen 2s infinite ease-in-out;
+}
+
+@keyframes pulseGreen {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.status-text {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+/* 3D Interactive Chamber */
+.hero-interactive-chamber {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 440px;
+}
+
+/* Background Layer: 3D Watermark 11 */
+.hero-watermark-3d {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-sans);
+  font-weight: 900;
+  font-size: clamp(14rem, 32vw, 32rem);
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  color: #0d0f14;
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+  text-shadow: 
+    0 -1px 0 rgba(255, 255, 255, 0.03),
+    0 2px 25px rgba(0, 0, 0, 0.95);
+}
+
+/* Huge KAUSHAL Typography Behind Dumbbell */
+.hero-huge-title {
+  position: relative;
+  z-index: 2; /* Behind the dumbbell rig (z-index 5) */
+  width: 100%;
+  text-align: center;
+  user-select: none;
+  pointer-events: none;
+}
+
+.title-word {
+  font-family: var(--font-sans);
+  font-weight: 900;
+  font-size: clamp(3.8rem, 14vw, 12.2rem);
+  line-height: 0.92;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  display: block;
+  color: #d8dbe2; /* Dim white tone */
+  text-shadow: 
+    0 4px 30px rgba(0, 0, 0, 0.95),
+    0 16px 70px rgba(0, 0, 0, 0.85);
+  background: linear-gradient(180deg, #f5f7fb 0%, #cbd2dc 55%, #9aa2b0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 3D Dumbbell Physically Overlapping the Text (Transitions on Scroll) */
+.hero-dumbbell-rig {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(320px, 38vw);
+  height: min(480px, 58vw);
+  z-index: 5; /* PHYSICALLY IN FRONT OF KAUSHAL TEXT */
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform, opacity;
+  filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.98));
+}
+
+.hero-dumbbell-render {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Subtitle Credentials Row */
+.hero-editorial-subtitles {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 18px;
+  padding: 0 12px;
+  font-family: var(--font-mono);
+  font-size: clamp(0.68rem, 1.1vw, 0.8rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.editorial-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.editorial-col.left {
+  text-align: left;
+}
+
+.editorial-col.right {
+  text-align: right;
+}
+
+.sub-label {
+  color: var(--accent-gold);
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+.sub-val {
+  color: var(--text-dim);
+}
+
 .hero-content {
   position: relative;
   z-index: 10;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 30px auto 0;
   text-align: center;
   width: 100%;
 }
