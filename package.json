@@ -1,0 +1,23 @@
+{
+  "name": "kaushal-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of Kaushal Shrestha (ZeyRox) - Full-Stack Creative Developer & Digital Architect",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static build ready'",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "kaushal-shrestha",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Kaushal Shrestha",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}

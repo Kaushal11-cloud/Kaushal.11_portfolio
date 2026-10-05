@@ -16,21 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 
-  // 1b. Hero Dumbbell Video Autoplay (Muted & Soundless)
-  const heroVideo = document.getElementById('heroDumbbellVideo');
-  if (heroVideo) {
-    heroVideo.muted = true;
-    heroVideo.defaultMuted = true;
-    heroVideo.volume = 0;
-    const playPromise = heroVideo.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        heroVideo.muted = true;
-        heroVideo.play().catch(() => {});
-      });
-    }
-  }
-
   // 2. Mobile Menu Toggle
   const mobileToggle = document.getElementById('mobileMenuToggle');
   const navMenu = document.getElementById('navMenu');
