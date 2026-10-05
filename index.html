@@ -2,24 +2,692 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>My test page</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaushal Shrestha (ZeyRox) | Full-Stack Creative Developer & Digital Architect</title>
+    <meta name="description" content="Portfolio of Kaushal Shrestha (ZeyRox) - Creative Full-Stack Developer specializing in high-performance digital products, modern web engineering, and immersive UI/UX experiences.">
+    <meta name="keywords" content="Kaushal Shrestha, ZeyRox, Portfolio, Web Developer, Full-Stack Developer, Creative Developer, UI/UX Designer">
+    <meta name="author" content="Kaushal Shrestha">
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kaushal Shrestha (ZeyRox) // Portfolio">
+    <meta property="og:description" content="Engineering digital experiences with weight and precision. Full-Stack Developer & Creative Technologist.">
+    <meta property="og:image" content="images/kaushal-11.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/kaushal-logo.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
-    <h1>Mozilla is cool</h1>
-    <img src="images/firefox-icon.png" alt="The Firefox logo: a flaming fox surrounding the Earth.">
 
-    <p>At Mozilla, we’re a global community of</p>
+    <!-- ==========================================================================
+         NAVIGATION HEADER
+         ========================================================================== -->
+    <header class="site-header" id="navbar">
+      <div class="container nav-container">
+        <a href="#home" class="brand-logo" aria-label="Kaushal Shrestha Home">
+          <img src="images/kaushal-logo.png" alt="Kaushal-XI Dragon Emblem" class="brand-logo-img">
+          <span class="brand-text">kaushal<span class="dot">.</span>XI</span>
+        </a>
 
-    <ul> <!-- changed to list in the tutorial -->
-      <li>technologists</li>
-      <li>thinkers</li>
-      <li>builders</li>
-    </ul>
+        <!-- Desktop Navigation -->
+        <nav aria-label="Primary Navigation">
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Works</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#timeline" class="nav-link">Journey</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
 
-    <p>working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
+        <!-- Right Side Header Action -->
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <a href="#contact" class="nav-cta">
+            <span>Let's Talk</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
 
-    <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>
+          <!-- Mobile Hamburger Toggle -->
+          <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ==========================================================================
+           HERO SECTION (HOME) - Dumbbell Motion Behind Kaushal
+           ========================================================================== -->
+      <section id="home" class="hero-section">
+        <!-- Ambient Grid & Spotlight -->
+        <div class="hero-overlay-grid" aria-hidden="true"></div>
+        <div class="hero-ambient-spotlight" aria-hidden="true"></div>
+
+        <!-- 3D Poster Stage (Dumbbell Motion Behind KAUSHAL) -->
+        <div class="hero-poster-stage" aria-hidden="true">
+          <!-- Layer 1: Watermark 11 in deep charcoal -->
+          <div class="hero-watermark-11">11</div>
+
+          <!-- Layer 2: 3D Dumbbell Rotating Motion (BEHIND Kaushal, sound removed) -->
+          <div class="hero-video-box">
+            <video 
+              id="heroDumbbellVideo"
+              class="hero-dumbbell-video" 
+              src="images/dumbbell-hero-clean.mp4" 
+              autoplay 
+              loop 
+              muted 
+              playsinline 
+              preload="auto"
+              poster="images/kaushal-11.jpg">
+            </video>
+          </div>
+
+          <!-- Layer 3: KAUSHAL Typography in Dim-White (IN FRONT of dumbbell motion) -->
+          <div class="hero-poster-typography">
+            <div class="hero-poster-title">KAUSHAL</div>
+            <div class="hero-poster-subtitles">
+              <div class="poster-sub-col left">
+                <span>YOUR TRUSTED PARTNER</span>
+                <span>IN INNOVATION AND CRAFT</span>
+              </div>
+              <div class="poster-sub-col right">
+                <span>EST. 2011</span>
+                <span>+ A DECADE OF EXCELLENCE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Actions & Metrics Row (Lower Hero Area) -->
+        <div class="container hero-content">
+          <h1 class="visually-hidden">Kaushal Shrestha (ZeyRox) &mdash; Creative Full-Stack Developer & Digital Architect</h1>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore Selected Works</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <span>Get In Touch</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Hero Metrics Bar -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Production Builds</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">Years of Craft</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Client Focus</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">0.1s</div>
+              <div class="stat-label">Target Latency</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#about" class="hero-scroll-btn" aria-label="Scroll down to about section">
+          <span>SCROLL</span>
+          <div class="scroll-indicator-icon">
+            <div class="scroll-indicator-dot"></div>
+          </div>
+        </a>
+      </section>
+
+      <!-- ==========================================================================
+           ABOUT SECTION
+           ========================================================================== -->
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">// ARCHITECTURE & PHILOSOPHY</span>
+            <h2 class="section-title">The Discipline Behind the Code</h2>
+            <p class="section-subtitle">Bridging engineering rigor with bold, visceral digital design.</p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card-featured">
+              <h3 class="about-card-title">Hello, I'm Kaushal.</h3>
+              <p class="about-lead">
+                I believe that modern software shouldn't just function smoothly—it should command attention, feel tangible, and deliver an unmistakable sense of quality.
+              </p>
+              <p class="about-body">
+                Whether architecting resilient backend pipelines or sculpting pixel-perfect interactive web experiences, I bring deep technical curiosity and uncompromising standards to every stage of digital product development.
+              </p>
+              <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+                <span class="tech-tag">Full-Stack Development</span>
+                <span class="tech-tag">UI/UX Systems</span>
+                <span class="tech-tag">Creative Direction</span>
+                <span class="tech-tag">API Design</span>
+              </div>
+            </div>
+
+            <div class="about-pillars">
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                </div>
+                <h4 class="pillar-title">Modern Architecture</h4>
+                <p class="pillar-desc">Clean, modular code built for scalability, security, and effortless maintainability.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                  </svg>
+                </div>
+                <h4 class="pillar-title">Sensory Interaction</h4>
+                <p class="pillar-desc">Micro-animations, responsive layout physics, and glassmorphic UI cues that feel alive.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                  </svg>
+                </div>
+                <h4 class="pillar-title">Obsessive Performance</h4>
+                <p class="pillar-desc">Sub-second load speeds, optimized asset rendering, and low memory footprints.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <h4 class="pillar-title">Responsive By Design</h4>
+                <p class="pillar-desc">Flawless typography and visual harmony across mobile phones, tablets, and 4K displays.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SELECTED WORKS / PROJECTS SECTION
+           ========================================================================== -->
+      <section id="projects" class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">// SELECTED BUILDS</span>
+            <h2 class="section-title">Featured Creations</h2>
+            <p class="section-subtitle">A curated collection of web applications, platforms, and interactive experiences.</p>
+          </div>
+
+          <!-- Category Filters -->
+          <div class="projects-filter">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="web-app">Web Applications</button>
+            <button class="filter-btn" data-filter="creative">Creative & 3D</button>
+            <button class="filter-btn" data-filter="systems">Systems & Core</button>
+          </div>
+
+          <!-- Projects Grid -->
+          <div class="projects-grid">
+            <!-- Project 1: Aethel Analytics -->
+            <article class="project-card" data-category="web-app">
+              <div class="project-media-wrap">
+                <img src="images/project-dashboard.jpg" alt="Aethel Financial Analytics SaaS Dashboard" class="project-img">
+                <span class="project-badge-tag">FINTECH SAAS</span>
+              </div>
+              <div class="project-content">
+                <div class="project-meta-row">
+                  <span>01</span>
+                  <span>/</span>
+                  <span>FULL-STACK WEB APP</span>
+                </div>
+                <h3 class="project-title">Aethel Financial Platform</h3>
+                <p class="project-desc">
+                  High-frequency financial metrics portal with real-time portfolio tracking, glowing visualization graphs, asset allocation metrics, and dark mode interface.
+                </p>
+                <div class="project-tags">
+                  <span class="tech-tag">JavaScript ESNext</span>
+                  <span class="tech-tag">Data Visualizations</span>
+                  <span class="tech-tag">Dark Architecture</span>
+                  <span class="tech-tag">RESTful API</span>
+                </div>
+                <div class="project-links">
+                  <a href="#contact" class="project-link-btn">
+                    <span>Live Demo</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                  <a href="#contact" class="project-link-btn" style="color: var(--text-muted);">
+                    <span>Case Study</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 16 16 12 12 8"></polyline>
+                      <line x1="8" y1="12" x2="16" y2="12"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2: Aura Studio -->
+            <article class="project-card" data-category="creative">
+              <div class="project-media-wrap">
+                <img src="images/project-creative.jpg" alt="Aura Creative Studio Showcase" class="project-img">
+                <span class="project-badge-tag">EXPERIENCE DESIGN</span>
+              </div>
+              <div class="project-content">
+                <div class="project-meta-row">
+                  <span>02</span>
+                  <span>/</span>
+                  <span>CREATIVE STUDIO</span>
+                </div>
+                <h3 class="project-title">Aura Studio Brand Platform</h3>
+                <p class="project-desc">
+                  An editorial luxury digital experience with floating geometric spatial sculptures, micro-interactions, custom cursor physics, and dark brutalist typography.
+                </p>
+                <div class="project-tags">
+                  <span class="tech-tag">WebGL / 3D</span>
+                  <span class="tech-tag">Interactive Physics</span>
+                  <span class="tech-tag">Editorial Typography</span>
+                  <span class="tech-tag">CSS Keyframes</span>
+                </div>
+                <div class="project-links">
+                  <a href="#contact" class="project-link-btn">
+                    <span>Explore Space</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                  <a href="#contact" class="project-link-btn" style="color: var(--text-muted);">
+                    <span>Architecture</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 16 16 12 12 8"></polyline>
+                      <line x1="8" y1="12" x2="16" y2="12"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SKILLS SECTION
+           ========================================================================== -->
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">// TECHNICAL CAPABILITIES</span>
+            <h2 class="section-title">Skills & Proficiencies</h2>
+            <p class="section-subtitle">Core competencies across the modern web and digital engineering stack.</p>
+          </div>
+
+          <div class="skills-grid">
+            <!-- Category 1 -->
+            <div class="skill-category-card">
+              <div class="skill-cat-header">
+                <div class="skill-cat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <h3 class="skill-cat-title">Frontend Engineering</h3>
+              </div>
+              <div class="skill-items-list">
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Semantic HTML5 & Accessibility</span>
+                    <span class="skill-percent">98%</span>
+                  </div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 98%;"></div></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Modern CSS & Grid / Flexbox</span>
+                    <span class="skill-percent">95%</span>
+                  </div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">JavaScript (ESNext / DOM)</span>
+                    <span class="skill-percent">92%</span>
+                  </div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Responsive Design & Animations</span>
+                    <span class="skill-percent">94%</span>
+                  </div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 94%;"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="skill-category-card">
+              <div class="skill-cat-header">
+                <div class="skill-cat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                  </svg>
+                </div>
+                <h3 class="skill-cat-title">Backend & Systems</h3>
+              </div>
+              <div class="skill-items-list">
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">API Design & Web Protocols</span>
+                    <span class="skill-percent">90%</span>
+                  </div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Node.js Server Runtime</span>
+                    <span class="skill-percent">88%</span>
+                  </div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Database Modeling (SQL / NoSQL)</span>
+                    <span class="skill-percent">85%</span>
+                  </div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Security & Performance Tuning</span>
+                    <span class="skill-percent">90%</span>
+                  </div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="skill-category-card">
+              <div class="skill-cat-header">
+                <div class="skill-cat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                  </svg>
+                </div>
+                <h3 class="skill-cat-title">Tooling & Workflow</h3>
+              </div>
+              <div class="skill-items-list">
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Git & Distributed Version Control</span>
+                    <span class="skill-percent">95%</span>
+                  </div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Design Systems & Prototyping</span>
+                    <span class="skill-percent">92%</span>
+                  </div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">CI / CD & Deployment Pipelines</span>
+                    <span class="skill-percent">86%</span>
+                  </div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 86%;"></div></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">SEO Architecture & Core Web Vitals</span>
+                    <span class="skill-percent">94%</span>
+                  </div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 94%;"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           CAREER TIMELINE
+           ========================================================================== -->
+      <section id="timeline" class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">// PROFESSIONAL MILESTONES</span>
+            <h2 class="section-title">The Journey & Experience</h2>
+            <p class="section-subtitle">Chronological progression of roles, builds, and engineering milestones.</p>
+          </div>
+
+          <div class="timeline-wrap">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <div class="timeline-meta">
+                  <span>2024 &mdash; PRESENT</span>
+                  <span>&bull;</span>
+                  <span>LEAD ARCHITECT</span>
+                </div>
+                <h3 class="timeline-role">Principal Creative Technologist</h3>
+                <div class="timeline-company">ZeyRox Digital Labs</div>
+                <p class="timeline-desc">
+                  Directing end-to-end architecture of bespoke web platforms, creative interactive campaigns, and enterprise cloud solutions with obsessive focus on craft.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <div class="timeline-meta">
+                  <span>2022 &mdash; 2024</span>
+                  <span>&bull;</span>
+                  <span>SENIOR ENGINEER</span>
+                </div>
+                <h3 class="timeline-role">Senior Full-Stack Developer</h3>
+                <div class="timeline-company">Frontier Tech Systems</div>
+                <p class="timeline-desc">
+                  Engineered distributed web portals, created scalable design systems, and cut page load times across production web apps by 48%.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <div class="timeline-meta">
+                  <span>2020 &mdash; 2022</span>
+                  <span>&bull;</span>
+                  <span>FOUNDATIONS</span>
+                </div>
+                <h3 class="timeline-role">Frontend & Interactive UI Specialist</h3>
+                <div class="timeline-company">Nexus Digital</div>
+                <p class="timeline-desc">
+                  Spearheaded modern responsive web overhauls, integrated REST APIs, and authored highly modular component libraries.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           CONTACT SECTION
+           ========================================================================== -->
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">// GET IN TOUCH</span>
+            <h2 class="section-title">Let's Build Something Notable</h2>
+            <p class="section-subtitle">Have a vision, an upcoming project, or looking to partner? Reach out directly.</p>
+          </div>
+
+          <div class="contact-layout">
+            <!-- Contact Left: Details & Channels -->
+            <div class="contact-info-panel">
+              <div class="contact-method-card">
+                <div class="contact-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-label">Direct Communication</div>
+                  <div class="contact-val">kaushal.zeyrox@example.com</div>
+                </div>
+              </div>
+
+              <div class="contact-method-card">
+                <div class="contact-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-label">Location & Timezone</div>
+                  <div class="contact-val">Global / Remote (GMT+5:45)</div>
+                </div>
+              </div>
+
+              <div class="contact-method-card">
+                <div class="contact-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-label">Current Availability</div>
+                  <div class="contact-val" style="color: #34d399;">Accepting Select Clients & Roles</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Right: Interactive Form -->
+            <div class="contact-form-card">
+              <div id="formToast" class="toast-notice" role="alert"></div>
+
+              <form id="contactForm" novalidate>
+                <div class="form-group">
+                  <label for="nameInput" class="form-label">Full Name *</label>
+                  <input type="text" id="nameInput" class="form-control" placeholder="e.g. Elena Rostova" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="emailInput" class="form-label">Email Address *</label>
+                  <input type="email" id="emailInput" class="form-control" placeholder="elena@company.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="subjectInput" class="form-label">Project Inquiries / Subject</label>
+                  <input type="text" id="subjectInput" class="form-control" placeholder="New Web Application / Consulting">
+                </div>
+
+                <div class="form-group">
+                  <label for="messageInput" class="form-label">Your Message *</label>
+                  <textarea id="messageInput" class="form-control" placeholder="Tell me about your project, timeline, and goals..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  <span>Dispatch Message</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <a href="#home" class="brand-logo" aria-label="Kaushal Shrestha Home">
+            <img src="images/kaushal-logo.png" alt="Kaushal-XI Dragon Emblem" class="brand-logo-img">
+            <span class="brand-text">kaushal<span class="dot">.</span>XI</span>
+          </a>
+
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Works</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <button id="backToTopBtn" class="back-to-top-btn" title="Back to Top" aria-label="Scroll back to top">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <div class="footer-bottom">
+          <div>&copy; 2026 Kaushal Shrestha (ZeyRox). All rights reserved. Crafted with precision & weight.</div>
+          <div style="font-family: var(--font-mono); font-size: 0.75rem;">EST. 2011 &bull; 11 MONOLITH</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
   </body>
 </html>
