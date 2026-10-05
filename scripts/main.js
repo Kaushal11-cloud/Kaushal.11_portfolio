@@ -15,66 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
-  // 1b. 3D Dumbbell Video Autoplay (Muted & Soundless)
-  const heroDumbbellVideo = document.getElementById('heroDumbbellVideo');
-  if (heroDumbbellVideo) {
-    heroDumbbellVideo.muted = true;
-    heroDumbbellVideo.defaultMuted = true;
-    heroDumbbellVideo.volume = 0;
-    const playPromise = heroDumbbellVideo.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        heroDumbbellVideo.muted = true;
-        heroDumbbellVideo.play().catch(() => {});
-      });
-    }
-  }
-
-  // 1c. Scroll-Driven 3D Dumbbell Transition Into Projects
-  const dumbbellRig = document.getElementById('heroDumbbellRig');
-  const lateralTag = document.querySelector('.hero-lateral-tag');
-
-  if (dumbbellRig) {
-    let ticking = false;
-
-    const handleDumbbellScroll = () => {
-      const scrollY = window.scrollY;
-      const vh = window.innerHeight;
-
-      // Transition progress over the first 1.2 screen heights
-      const progress = Math.min(1, Math.max(0, scrollY / (vh * 1.15)));
-
-      if (progress > 0) {
-        // Smooth kinematic glide down towards works section
-        const translateY = scrollY * 0.72;
-        const scale = Math.max(0.45, 1 - progress * 0.52);
-        const rotate = progress * 32;
-        const opacity = progress > 0.88 ? Math.max(0, 1 - (progress - 0.88) / 0.12) : 1;
-
-        dumbbellRig.style.transform = `translate(-50%, calc(-50% + ${translateY}px)) scale(${scale}) rotate(${rotate}deg)`;
-        dumbbellRig.style.opacity = opacity;
-      } else {
-        dumbbellRig.style.transform = 'translate(-50%, -50%) scale(1) rotate(0deg)';
-        dumbbellRig.style.opacity = '1';
-      }
-
-      // Fade lateral developer tag gently on deep scroll
-      if (lateralTag) {
-        lateralTag.style.opacity = Math.max(0, 0.85 - progress * 0.85);
-      }
-
-      ticking = false;
-    };
-
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        window.requestAnimationFrame(handleDumbbellScroll);
-        ticking = true;
-      }
-    }, { passive: true });
-
-    handleDumbbellScroll();
-  }
 
   // 2. Mobile Menu Toggle
   const mobileToggle = document.getElementById('mobileMenuToggle');
